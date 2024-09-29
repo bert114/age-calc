@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+$bg: #fffffe;
+$clr-text: #0d0d0d;
+$clr-overlay: #eff0f3;
+
+$clr-neutral: #5e5e5e;
+$clr-primary400: #d9376e;
+$clr-err: #ff3333;
+
+body {
+  font-size: 14px;
+  color: $clr-text;
+  background-color: $bg;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

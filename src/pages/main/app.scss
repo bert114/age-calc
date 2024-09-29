@@ -1,0 +1,133 @@
+@use "../../scss/global" as *;
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 14px;
+  font-weight: 500;
+
+  .container {
+    background-color: $clr-overlay;
+    width: min(92%, 540px);
+    padding: 3em 1.8em;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 20px 20px 80px 20px;
+  }
+
+  .input-wrapper {
+    line-height: 1;
+    font-size: 14px;
+    color: $clr-neutral;
+
+    label {
+      font-weight: 800;
+      font-size: 0.9em;
+    }
+
+    ul {
+      display: flex;
+      gap: 1.2em;
+
+      > * {
+        flex: 1;
+      }
+    }
+
+    input {
+      width: 100%;
+      margin-top: 0.4rem;
+      margin-bottom: 0.1rem;
+      height: 2.7em;
+      padding: 0 1rem;
+      border-radius: 8px;
+      border: 1.5px solid $clr-neutral;
+      color: $clr-text;
+      font-weight: 900;
+      font-size: 1.3em;
+
+      background: none;
+      outline: none;
+
+      &.error {
+        border: 1.5px solid $clr-err;
+      }
+    }
+
+    span {
+      height: 0.5rem;
+      display: block;
+      font-size: 0.7em;
+      color: $clr-err;
+      margin-top: 0.2rem;
+    }
+  }
+
+  .btn-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 28px;
+    > :nth-child(1) {
+      border-top: 0.1px solid $clr-neutral;
+      width: 100%;
+    }
+
+    button {
+      --size: 2.2em;
+      color: $clr-overlay;
+      position: absolute;
+      border: none;
+      background-color: $clr-primary400;
+      height: var(--size);
+      width: var(--size);
+      border-radius: 50%;
+      transition: 0.15s;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
+  .days-wrapper {
+    font-size: 3.4em;
+    margin-top: 2.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+
+    span {
+      color: $clr-primary400;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  main {
+    .container {
+      padding: 2.8rem 2rem;
+      border-radius: 24px 24px 100px 24px;
+    }
+
+    .input-wrapper {
+      width: 80%;
+      font-size: 14px;
+    }
+
+    .btn-wrapper {
+      justify-content: flex-end;
+      margin-top: 1.8rem;
+      font-size: 29px;
+    }
+
+    .days-wrapper {
+      display: grid;
+      margin-top: 1.5rem;
+      line-height: 1.3;
+      font-size: 50px;
+    }
+  }
+}
